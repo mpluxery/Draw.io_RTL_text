@@ -1,28 +1,57 @@
-# RTL Text Configuration for draw.io
+# RTL Support for draw.io
 
-This repository contains a JSON configuration file tailored for draw.io (or similar diagramming tools) to provide optimal support for Hebrew text with right-to-left (RTL) directionality.
+This repository provides two ways to enable optimal right-to-left (RTL) text support in **draw.io** diagrams:
 
-## Features
+---
 
-- Default font set to **Noto Sans Hebrew**, with fallback fonts.
-- Font size set to 25 for clear readability.
-- Text alignment and direction set to support RTL languages.
-- Automatic enforcement of RTL text direction on paste operations.
-- Support for HTML labels and autosave.
-- Styles configured for vertices and edges to maintain consistency in Hebrew text rendering.
+## Available Files
+
+- `draw.io_rtl_configuration_with_PASTE_FIXED.js`  
+  A JSON configuration file that sets fonts, text direction, alignment, and paste behavior to RTL.  
+  Recommended for use **inside the draw.io desktop application or offline versions** via **Extras > Configuration**.
+
+- `draw.ioRTL.js`  
+  A simpler JSON configuration file for RTL styling, without paste direction fixes.
+
+- `RTLplugin.js`  
+  A JavaScript plugin for draw.io that automatically applies the RTL configuration (including paste direction fixes) when loaded.  
+  Recommended for use **when working with draw.io in a web browser**, allowing dynamic loading without manual configuration.
+
+---
 
 ## How to Use
 
-1. Open **draw.io** (or the compatible diagram tool).
-2. Go to the menu and select **Extras** > **Configuration**.
-3. In the Configuration dialog, paste the entire JSON code from this repository.
-4. Save and close the dialog.
-5. Start creating diagrams with Hebrew text that automatically respects right-to-left layout and styling.
+### Using the Configuration File
+
+1. Open **draw.io** desktop or offline app.
+2. Go to **Extras** > **Configuration**.
+3. Paste the entire content of `draw.io_rtl_configuration_with_PASTE_FIXED.js` (or `draw.ioRTL.js` for simpler needs).
+4. Save and close.
+5. All text input will be properly aligned and formatted for RTL usage.
 
 ---
 
-If you experience any issues or have suggestions, feel free to open an issue or submit a pull request.
+### Using the RTL Plugin (`RTLplugin.js`)
+
+1. Open **draw.io** in your web browser.
+2. Go to **Extras** > **Plugins** > **Load Plugin...**.
+3. Upload the `RTLplugin.js` file.
+4. The plugin will automatically apply the RTL settings including paste direction enforcement.
+5. Enjoy seamless RTL Hebrew text editing without manual configuration.
 
 ---
 
-**Note:** This configuration is especially useful when working with Hebrew or other RTL languages to avoid common text direction and formatting problems.
+## Recommendations
+
+- If you primarily use the **desktop/offline draw.io application**, using the **configuration file** method is simpler and more stable.
+- If you mainly use **draw.io in a browser**, the **plugin** offers a flexible and easy way to enable RTL support without altering global settings.
+
+---
+
+## Support and Contributions
+
+If you find issues or want to contribute improvements, please open an issue or a pull request.
+
+---
+
+**Note:** All files are designed to improve Hebrew text handling in draw.io, including fonts, alignment, spacing, and right-to-left text direction — especially fixing paste behavior which is common with Hebrew text input.
